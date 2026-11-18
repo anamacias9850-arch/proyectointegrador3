@@ -1,0 +1,17 @@
+* { box-sizing: border-box; font-family: sans-serif; }
+body { margin: 0; background: #f8f5f2; color: #2b2b2b; }
+header { background: #3e2723; color: white; padding: 1.2rem; text-align: center; }
+.contenedor { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.kpis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.kpi-card, .card { background: white; padding: 1.2rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.kpi-card { border-left: 4px solid #6d4c41; }
+.graficas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.inventario-grid { display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; }
+form { display: flex; flex-direction: column; gap: 0.7rem; }
+input, button { padding: 0.6rem; border-radius: 5px; border: 1px solid #ccc; }
+button { cursor: pointer; border: none; color: white; font-weight: bold; }
+.btn-primario { background: #3e2723; }
+.btn-comprar { background: #2e7d32; margin-right: 4px; }
+.btn-eliminar { background: #c62828; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 0.6rem; border-bottom: 1px solid #eee; text-align: left; }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Café & Código | Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>☕ Café & Código — Tienda & Analytics</h1>
+    </header>
+
+    <main class="contenedor">
+        <section class="kpis-grid">
+            <div class="kpi-card"><span>Ingresos Totales</span><h2 id="kpi-ingresos">$0.00</h2></div>
+            <div class="kpi-card"><span>Producto Estrella</span><h2 id="kpi-estrella">-</h2></div>
+            <div class="kpi-card"><span>Transacciones</span><h2 id="kpi-transacciones">0</h2></div>
+            <div class="kpi-card"><span>Ticket Promedio</span><h2 id="kpi-ticket">$0.00</h2></div>
+        </section>
+
+        <section class="graficas-grid">
+            <div class="card"><h3>Ingresos por Producto</h3><canvas id="graficaProductos"></canvas></div>
+            <div class="card"><h3>Ventas por Fecha</h3><canvas id="graficaFechas"></canvas></div>
+        </section>
+
+        <section class="inventario-grid">
+            <div class="card">
+                <h3>➕ Nuevo Producto</h3>
+                <form id="form-producto">
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="text" id="categoria" placeholder="Categoría" required>
+                    <input type="number" id="precio" step="0.5" placeholder="Precio ($)" required>
+                    <input type="number" id="stock" placeholder="Stock inicial" required>
+                    <button type="submit" class="btn-primario">Agregar Producto</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>📦 Inventario</h3>
+                <table>
+                    <thead>
+                        <tr><th>ID</th><th>Producto</th><th>Categoría</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr>
+                    </thead>
+                    <tbody id="tabla-productos"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
